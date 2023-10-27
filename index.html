@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Your Company Name</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+      body {
+            background-color: rgb(110, 110, 110); /* Change this to your desired background color */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Adjust the carousel height for smaller screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 300px; /* Adjust the height as needed for smaller screens */
+    }
+    .carousel-inner {
+        text-align: center; /* Center the carousel content vertically on smaller screens */
+    }
+}
+        .carousel-item
+        {height: 600px;
+        }
+
+        .navbar-brand {
+            /* Add your logo styling here */
+            font-size: 24px;
+            font-weight: bold;
+            color: white; /* Change the color to your preference */
+        }
+        .nav-link {
+            /* Add your navigation link styling here */
+            font-size: 18px;
+            text-transform: uppercase;
+            color: white !important; /* Add !important to ensure it takes precedence */
+        }
+        /* Change the link color to red on hover */
+.nav-link:hover {
+  color: red !important;
+}
+        .navbar {
+            /* Add your navigation bar styling here */
+            background-color: transparent gray; /* Change the background color to your preference */
+        }
+        /* Style the navigation links */
+        .navbar-toggler {
+    border: none; /* Remove the default border */
+  }
+/* Add a background color and adjust text color for mobile dropdown menu */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust the background color and opacity as needed */
+    padding: 10px; /* Add some padding for better visibility */
+  }
+  .navbar-nav {
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust the background color and opacity as needed */
+  }
+  .nav-item {
+    padding: 10px; /* Add padding to menu items for better spacing */
+  }
+  .nav-link {
+    color: #fff; /* Change the text color to improve visibility */
+  }
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 300px; /* Adjust the height as needed for smaller screens */
+    }
+    .carousel-item img {
+        width: 100%; /* Make the images fill the width of the carousel */
+        height: 100%; /* Make the images fill the height of the carousel */
+        object-fit: cover; /* Crop or scale the images as needed to cover the entire carousel item */
+    }
+}
+/* Welcome */
+.welcome-section {
+        background-color: #333333;
+        padding: 1em 0;
+    }
+
+    .welcome-section h5 {
+        color: #D20000;
+        font-size: 25px;
+        font-weight: 700;
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+
+    .welcome-section h5 span {
+        color: #FFFFFF;
+    }
+
+    .welcome-section h5::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 50px;
+        margin-top: 10px;
+        background-color: #D20000;
+        margin-left: 0px;
+        margin-bottom: 40px;
+    }
+
+    .welcome-text p {
+        font-size: 18px;
+        text-align: justify;
+        color: #FFFFFF;
+        line-height: 1.75em;
+    }
+
+    .business-hours {
+    margin-left: 20px; /* Adjust the margin as needed */
+}
+
+	.businessHours .c-table {
+		font-size: 18px;
+		line-height: 1.7em;
+		border-bottom: 1px solid #D20000;
+    color: #FFFFFF;
+	}
+
+	      .businessHours .c-table:last-child {
+		        border-bottom: none;
+	      }
+        /* Adjust the layout for the weekdays and hours in the businessHours section */
+.business-hours-table {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.weekday {
+    flex: 1; /* Make weekdays take up 50% of the space */
+}
+
+.hours {
+    flex: 1; /* Make hours take up 50% of the space */
+    text-align: right; /* Align the hours to the right */
+}
+
+.btn-primary {
+             background-color: red; /* Set the background color to red */
+             color: white; /* Set the text color to white */
+             border: none; /* Remove the default button border */
+             padding: 10px 20px; /* Adjust padding as needed */
+             border-radius: 5px; /* Add rounded corners */
+             font-size: 18px; /* Adjust font size as needed */
+             text-decoration: none; /* Remove underlines (for links) */
+        }
+
+       .btn-primary:hover {
+             background-color: darkred; /* Change the background color on hover */
+             color: white; /* Text color on hover */
+             transition: background-color 0.3s, color 0.3s; /* Smooth hover transition */
+        }
+        /* Style for the Featured Vehicles heading */
+        .featured-heading {
+    text-align: center;
+    font-size: 34px; /* Adjust the font size as needed */
+    color: white; /* Adjust the text color as needed */
+    margin-top: 20px; /* Add margin space above the heading */
+    margin-bottom: 20px;
+}
+        
+ /* Style for the cards container */
+ .card-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        /* Style for each card */
+        .card {
+            width: calc(25% - 20px); /* 4 cards per row, with some spacing */
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Style for card images */
+        .card-img-top {
+            max-width: 100%;
+            height: auto;
+        }
+        /* Style for card images */
+        .card-img-container {
+            height: 200px; /* Set a fixed height for card images */
+            overflow: hidden;
+        }
+
+        .card-img-container img {
+            max-width: 100%;
+            height: 100%;
+            object-fit: cover; /* Prevent images from stretching */
+        }
+
+        /* Media query for screens smaller than 768px (e.g., mobile devices) */
+        @media (max-width: 768px) {
+            .card-container {
+                display: block; /* Stack cards on smaller screens */
+            }
+
+            .card {
+                width: 100%; /* Full width for each card on smaller screens */
+            }
+        }
+        
+/* Style for the H5 tags within the card body */
+.card-body h5 {
+    color: black; /* Add your desired text color */
+    font-weight: bold;
+}
+
+/* Style for the P tags within the card body */
+.card-body p {
+    color: green; /* Add your desired text color */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+        /* Style for the Contact section */
+/* Background for the entire page */
+.background-section {
+    background-color: #333333; /* Set the background color */
+    margin-top: 3em;
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+
+/* Style for the Contact section */
+.contact-section {
+    border: 1px solid red; /* Add a border */
+    padding: 20px; /* Add padding for spacing */
+    background-color: #333333;
+
+}
+
+.contact-section h3 {
+    color: white; /* Set the heading color */
+    text-align: center;
+}
+/* Custom styling for the Contact Us button */
+.custom-contact-button {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 11px 30px; /* Adjust the padding for the button */
+  font-size: 18px; /* Adjust the font size for the button */
+  text-decoration: none;
+  margin-bottom: 25px;
+}
+
+.custom-contact-button:hover {
+  background-color: darkred;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Style for the Connect section */
+.connect-section {
+    border: 1px solid red; /* Add a border */
+    padding: 20px; /* Add padding for spacing */
+    background-color: #1e3be2;
+    text-align: center;
+}
+
+.connect-section h3 {
+    color: white; /* Set the heading color */
+    text-align: center;
+}
+
+/* Style for the `p` elements in both sections */
+.contact-section p,
+.connect-section p {
+    color: white; /* Set the text color for the `p` elements */
+    font-size: 16px; /* Set the font size for the `p` elements */
+    margin-bottom: 10px; /* Add margin to separate `p` elements */
+}
+.connect-section a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Set link color to white */
+    display: inline-block; /* Make links behave like blocks */
+    margin: 10px; /* Add spacing between icons */
+}
+
+.connect-section i {
+    font-size: 35px; /* Adjust the icon size as needed */
+}
+/* Add space between the sections on smaller screens (less than 768px wide) */
+@media (max-width: 768px) {
+    .connect-section {
+        margin-top: 10px; /* Reduce the margin for smaller screens */
+    }
+}
+footer {
+        background-color: #333; /* Background color for the footer */
+        color: white; /* Text color for the footer */
+        padding: 10px 0; /* Add padding to the top and bottom of the footer */
+        margin-top: 2em;
+    }
+
+    /* Center the text in the footer */
+    footer p {
+        text-align: center;
+        font-size: 14px;
+    }
+    /* Style the Company Name */
+.company-name {
+    font-weight: bold;
+    color: white; /* Change the color to your desired one */
+    font-size: 18px; /* Adjust font size as needed */
+}
+
+/* Style the Address */
+.address {
+    color: white; /* Change the color to your desired one */
+    font-size: 16px; /* Adjust font size as needed */
+}
+
+/* Style the Phone Number */
+.phone-number {
+    color: white; /* Change the color to your desired one */
+    font-size: 16px; /* Adjust font size as needed */
+}
+/* Style the Email */
+.email {
+    font-style: italic;
+    color: white; /* Change the color to your desired one */
+    font-size: 16px; /* Adjust font size as needed */
+}
+/* Add margin to the bottom of the top 4 p elements to make them closer together */
+.company-name, .address, .phone-number, .email {
+    margin-bottom: 10px; /* Adjust the margin as needed */
+}
+/* Style the copyright text */
+.copyright {
+    margin-top: 30px; /* Adjust the margin-top to drop it down */
+    color: red; /* Set the text color to red */
+    font-size: 14px; /* Adjust the font size as needed */
+    font-weight: bold; /* Make it bold if desired */
+}
+
+    </style>
+    
+   </head>
+
+   <body>
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container-fluid px-5">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbarToggler" aria-controls="myNavbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="myNavbarToggler">
+                <a class="navbar-brand" href="#"><img src="logo.png" alt="logo" height="30" width="50"></a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="inventory.html">Inventory</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link" href="financing.html">Financing</a>
+                  </li>             
+                 <li class="nav-item">
+                    <a class="nav-link" href="about-us.html">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/mustang1.jpg" class="d-block w-100" alt="Mustang">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Your Text Here</h1>
+                    <p>Your Description Here</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/charger1.jpg" class="d-block w-100" alt="Charger">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Your Text Here</h1>
+                    <p>Your Description Here</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/challenger1.jpg" class="d-block w-100" alt="Challenger">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Your Text Here</h1>
+                    <p>Your Description Here</p>
+                  </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mycarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mycarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+      </header>
+      <div class="welcome-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    <div class="welcome-text">
+                        <h5 class="font-primary"><span>Welcome to</span> (Your Website)</h5>
+                        <p>At (Your Website Here) Used Cars, located in (Your Town Here), we take 
+                            pride in the way we do business. We focus 100% on our customers and believe 
+                            car-buying should be a fun, hassle-free experience! Our impressive selection
+                            of cars, trucks, and SUVs is sure to meet your needs. We'd like to thank 
+                            you for considering (Your Website Here) Used Cars for your next vehicle purchase.</p>
+                        <div class="pull-right font-primary">
+                            <a class="btn btn-primary" href="about-us.html">About Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <div class="hours-text">
+                        <h5 class="font-primary"><span>Hours of</span> Operation</h5>
+                        <div class="businessHours">
+                            <div class="business-hours-table c-table">
+                                <div class="c-tablecell weekday">
+                                    Monday
+                                </div>
+                                <div class="c-tablecell hours">
+                                    9:00 AM - 6:00 PM
+                                </div>
+                            </div>
+                            <div class="business-hours-table c-table">
+                                <div class="c-tablecell weekday">
+                                    Tuesday
+                                </div>
+                                <div class="c-tablecell hours">
+                                    9:00 AM - 6:00 PM
+                                </div>
+                            </div>
+                            <div class="business-hours-table c-table">
+                                <div class="c-tablecell weekday">
+                                    Wednesday
+                                </div>
+                                <div class="c-tablecell hours">
+                                    9:00 AM - 6:00 PM
+                                </div>
+                            </div>
+                            <div class="business-hours-table c-table">
+                                <div class="c-tablecell weekday">
+                                    Thursday
+                                </div>
+                                <div class="c-tablecell hours">
+                                    9:00 AM - 6:00 PM
+                                </div>
+                            </div>
+                            <div class="business-hours-table c-table">
+                                <div class="c-tablecell weekday">
+                                    Friday
+                                </div>
+                                <div class="c-tablecell hours">
+                                    9:00 AM - 6:00 PM
+                                </div>
+                            </div>
+                            <div class="business-hours-table c-table">
+                                <div class="c-tablecell weekday">
+                                    Saturday
+                                </div>
+                                <div class="c-tablecell hours">
+                                    10:00 AM - 2:00 PM
+                                </div>
+                            </div>
+                            <div class="business-hours-table c-table">
+                                <div class="c-tablecell weekday">
+                                    Sunday
+                                </div>
+                                <div class="c-tablecell hours">
+                                    Closed
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Car Listings Section -->
+<div class="container">
+    <h2 class="featured-heading">Featured Vehicles</h2>
+</div>
+
+<!-- Create a container for the cards -->
+<div class="container card-container">
+    <!-- Card 1 -->
+    <div class="card">
+        <div class="card-img-container">
+            <img src="images/image1.png" class="card-img-top" alt="Vehicle 1">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Vehicle 1</h5>
+            <p class="card-text">Price  $XX.XXX</p>
+            <a href="featured-listing/car1.html" class="btn btn-primary">Veiw</a>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+        <div class="card-img-container">
+            <img src="images/image2.jpg" class="card-img-top" alt="Vehicle 2">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Vehicle 2</h5>
+            <p class="card-text">Price  $XX.XXX</p>
+            <a href="featured-listing/car2.html" class="btn btn-primary">Veiw</a>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+        <div class="card-img-container">
+            <img src="images/image3.jpeg" class="card-img-top" alt="Vehicle 3">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Vehicle 3</h5>
+            <p class="card-text">Price  $XX.XXX</p>
+            <a href="featured-listing/car3.html" class="btn btn-primary">Veiw</a>
+        </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+        <div class="card-img-container">
+            <img src="images/image4.jpg" class="card-img-top" alt="Vehicle 4">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Vehicle 4</h5>
+            <p class="card-text">Price  $XX.XXX</p>
+            <a href="featured-listing/car4.html" class="btn btn-primary">Veiw</a>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-4">
+  <a href="inventory.html" class="btn btn-primary btn-lg">All Inventory</a>
+  <a href="financing.html" class="btn btn-primary btn-lg mx-2">Financing</a>
+</div>
+<!-- Background for the entire page -->
+<div class="background-section">
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Contact section -->
+        <div class="contact-section">
+          <div class="text-center mt-4">
+            <a href="contact.html" class="btn btn-primary custom-contact-button">Contact Us</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <!-- Connect section -->
+        <div class="connect-section">
+          <h3>Connect with Us</h3>
+          <a href="https://www.facebook.com">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://twitter.com">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="text-center mt-4">
+    <a href="review.html" class="btn btn-primary btn-lg">Reviews</a>
+</div>
+     
+   
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   </body>
+   <footer>
+    <div class="container text-center py-3">
+        <p class="company-name">Your Company Name Here</p>
+        <p class="address">Your Address Here</p>
+        <p class="phone-number">Your Phone Number Here</p>
+        <p class="email">Your Email Here</p>
+        <p class="copyright">&copy; 2023 JBS Web Designs. All rights reserved.</p>
+    </div>
+</footer>
+
+
+
+</html>
